@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "project": {
+    "name": "smash-brothers-joint",
+    "productType": "restaurant landing page and WhatsApp ordering menu",
+    "stack": ["react", "vite"]
+  },
+  "sources": {
+    "tokens": ["src/styles.css"],
+    "components": ["src/App.jsx"],
+    "assets": ["public/images"],
+    "instructions": ["design-system/smash-brothers-joint/MASTER.md"]
+  },
+  "design": {
+    "colorMode": "dark",
+    "colors": {
+      "background": "#171512",
+      "surface": "#24211d",
+      "foreground": "#f5eddf",
+      "mutedForeground": "#d8cebe",
+      "primary": "#f5a800",
+      "secondary": "#b6db46"
+    },
+    "typography": {"display": "Fredoka", "body": "Nunito"},
+    "spacing": {"contentMax": "1180px"},
+    "radius": {"card": "26px", "button": "15px"},
+    "shadows": {"floating": "0 22px 60px rgba(0,0,0,.25)"},
+    "motion": {
+      "interaction": "180-220ms",
+      "hero": "pointer tilt plus slow float",
+      "reducedMotion": "static final state"
+    },
+    "density": "standard"
+  },
+  "components": {
+    "installed": ["lucide-react"],
+    "preferredPrimitives": ["semantic HTML", "project CSS tokens"],
+    "patterns": ["floating food hero", "filterable visual menu cards", "persistent WhatsApp conversion"]
+  },
+  "constraints": {
+    "must": ["French copy", "44px minimum targets", "visible focus", "responsive layout", "reduced-motion support", "WhatsApp CTA"],
+    "avoid": ["generic gradients", "glass-heavy food cards", "emoji icons", "autoplay media", "heavy WebGL on mobile"]
+  },
+  "decisions": [
+    {
+      "decision": "Use a charcoal, cream, amber and lime palette derived from the storefront identity and food photography.",
+      "reason": "Creates appetite appeal and brand recognition while maintaining accessible contrast."
+    },
+    {
+      "decision": "Use a lightweight 2.5D floating hero instead of a full WebGL scene.",
+      "reason": "Preserves dimensional impact with better mobile performance and reduced-motion support."
+    },
+    {
+      "decision": "Adapt the public 21st Floating Food Hero and responsive card patterns to the restaurant.",
+      "reason": "Grounds the interface in relevant 21st patterns without unnecessary dependencies."
+    }
+  ],
+  "evidence": [
+    {"fact": "project.stack:react", "source": "package.json"},
+    {"fact": "project.stack:vite", "source": "package.json"},
+    {"fact": "public 21st floating food hero reference", "source": "21st.dev/@ravikatiyar162/components/hero-section-7"}
+  ]
+}

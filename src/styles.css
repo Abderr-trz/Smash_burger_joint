@@ -1,0 +1,77 @@
+@import './styles-base.css';
+
+html,
+body,
+#root,
+.site-shell {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.hero,
+.hero-copy,
+.hero-stage,
+.section-heading,
+.concept-copy,
+.location-card {
+  min-width: 0;
+}
+
+.hero-copy,
+.hero-stage {
+  width: 100%;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+.eyebrow {
+  overflow-wrap: anywhere;
+}
+
+.menu-toggle {
+  flex: 0 0 48px;
+}
+
+@media (max-width: 820px) {
+  .site-header {
+    max-width: calc(100vw - 20px);
+  }
+
+  .hero {
+    width: calc(100% - 28px);
+  }
+
+  .hero-stage {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero,
+  .menu-section,
+  .concept-section,
+  .location-section,
+  .final-cta,
+  footer {
+    width: calc(100% - 28px);
+  }
+
+  .hero-copy h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(3.15rem, 14.5vw, 4.35rem);
+  }
+
+  .hero-stage {
+    margin-inline: 0;
+  }
+
+  .eyebrow {
+    max-width: 100%;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+}
